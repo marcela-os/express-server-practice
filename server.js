@@ -31,7 +31,7 @@ app.post('/contact/send-message', (req, res, next) => {
 			next(err);
 			return;
 		}
-		if(fields.author && fields.sender && fields.title && fields && fields.message){
+		if(fields.author && fields.sender && fields.title && files.design && fields.message){
 			res.render('contact', { isSent: true, file: files.design.name });
 		}
 		else {
